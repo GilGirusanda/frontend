@@ -16,6 +16,9 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import AssignmentIcon from "@mui/icons-material/Assignment";
+import EventIcon from "@mui/icons-material/Event";
+import Diversity1OutlinedIcon from "@mui/icons-material/Diversity1Outlined";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -142,22 +145,29 @@ const Sidebar = (props) => {
               </Typography>
               <Item
                 title="Manage Teams"
-                to="/team"
+                to="/dashboard/teamlist"
                 icon={<PeopleOutlinedIcon />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Task List"
-                to="/tasklist"
-                icon={<ContactsOutlinedIcon />}
+                to="/dashboard/tasklist"
+                icon={<AssignmentIcon />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Event List"
-                to="/eventlist"
-                icon={<ReceiptOutlinedIcon />}
+                to="/dashboard/eventlist"
+                icon={<EventIcon />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Member List"
+                to="/dashboard/memberlist"
+                icon={<Diversity1OutlinedIcon />}
                 selected={selected}
                 setSelected={setSelected}
               />
